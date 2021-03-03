@@ -35,4 +35,8 @@ describe('map', () => {
     it('map([-1], cube) should give [-1]', () => {
         expect(map([-1],"square")).toEqual([1]);
     });
+
+    it('map([2,8], cube) should give [4,64]', () => {
+        expect(map([2,8],"square")).toEqual([4,64]);
+    });
 })
