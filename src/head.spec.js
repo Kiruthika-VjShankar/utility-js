@@ -18,4 +18,8 @@ describe('head', () => {
         expect(head([100,102])).toEqual(100);
     });
 
+    it('[10012,102] is -11', () => {
+        expect(head([10012,102])).toEqual(10012);
+    });
+
 })
