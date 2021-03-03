@@ -12,4 +12,5 @@ const min = (array) => {
       minElement = array[index];
     return findMin(array,index+1,minElement)
   }
+  
   module.exports = min;

@@ -29,6 +29,10 @@ describe('reduce', () => {
     it('reduce([],v(x,y)=>x+y,10) should be 10', () => {
         expect(reduce([1,2,3],(x,y)=>x+y)).toEqual(6);
     });
+
+    it('reduce([a,g,h],(x,y)=>x+y,A) should be undefined', () => {
+        expect(reduce(['a','g','h'],(x,y)=>x+y,'A')).toEqual('A');
+    });
 })
 
 

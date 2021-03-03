@@ -14,4 +14,8 @@ describe('head', () => {
         expect(head([-11])).toEqual(-11);
     });
 
+    it('[100,102] is -11', () => {
+        expect(head([100,102])).toEqual(100);
+    });
+
 })

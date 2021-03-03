@@ -1,5 +1,5 @@
 const head = (array) => {
-    if(array==null)
+    if(array == null)
         return null;
     return array[0];
 }

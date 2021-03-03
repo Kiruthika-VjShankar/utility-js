@@ -1,12 +1,37 @@
-const map = (array,function_) => {
+const map = (array,func) => {
     if(array==null)
         return array;
-    if(function_==="identity")
+    if(func==="identity")
         return array;
-    for(var i = 0;i<array.length;i++){
-        array[i] = array[i]*array[i]*array[i];
+
+    else if(func=="cube"){
+        return arrayCube(array,0);
+    }
+    else if(func=="square"){
+        return arraySquare(array,0);
     }
     return array;
 }
 
+function arrayCube(array,index){
+    if(index>=array.length)
+        return array;
+    array[index] = cube(array[index]);
+    return arrayCube(array,index+1);
+}
+
+function arraySquare(array,index){
+    if(index>=array.length)
+        return array;
+    array[index] = square(array[index]);
+    return arraySquare(array,index+1);
+}
+
+function cube(number){
+    return number*number*number;
+}
+
+function square(number){
+    return number*number;
+}
 module.exports = map;

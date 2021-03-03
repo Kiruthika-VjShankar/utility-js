@@ -11,13 +11,7 @@ const reduce = (list, reducer, initialValue) => {
         accumulator = initialValue;
     index = 0;
 
-    return myReduce(list,index,accumulator,reducer);
-     /*else {
-      const [first, ...rest] = list;
-      const updatedAcc = reducer(initialValue, first);
-      return reduce(rest, updatedAcc, reducer);
-    }*/
-    
+    return myReduce(list,index,accumulator,reducer);    
   }
 
   var isAlpha = function(ch){
@@ -34,14 +28,3 @@ function myReduce(array,index,accumulator,func){
 }
 
   module.exports = reduce;
-
-  /*Array.prototype.myReduce = function(callback){
-    var a =0;                              // Step 1
-    for(let i=0; i<this.length; i++)       // Step 2
-    {
-        callback(a = a+this[i])            // Step 3
-    }
-     
-    return a;                              // Step 4
-}*/
-

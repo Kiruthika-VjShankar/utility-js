@@ -19,7 +19,12 @@ describe('filter', () => {
     });
 
     it('filter([a,B,c,D], filterUpperCase) should be [B,D]', () => {
-        expect(filter(['a','B','c','D'],uppercase)).toEqual(['B','D']);
+        expect(filter(['a','B','c','D'],filteruppercase)).toEqual(['B','D']);
     });
+
+    it('filter([a,B,c,D], filterUpperCase) should be [B,D]', () => {
+        expect(filter(['B'],filteruppercase)).toEqual(['B','D']);
+    });
+
 })
 

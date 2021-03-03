@@ -29,6 +29,10 @@ describe('map', () => {
     });
 
     it('map([-1], cube) should give [-1]', () => {
-        expect(map([-1],"identity")).toEqual([-1]);
+        expect(map([-1],"cube")).toEqual([-1]);
+    });
+
+    it('map([-1], cube) should give [-1]', () => {
+        expect(map([-1],"square")).toEqual([1]);
     });
 })

@@ -22,4 +22,8 @@ describe('tail', () => {
         expect(tail([1203,23,88])).toEqual([23,88]);
     });
 
+    it('[1,1,1] is [1,1]', () => {
+        expect(tail([1,1,1])).toEqual([1,1]);
+    });
+
 })

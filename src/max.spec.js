@@ -21,4 +21,9 @@ describe('max', () => {
     it('[] is []', () => {
         expect(max([])).toEqual([]);
     });
+
+    it('[-101,-1001] is [-101]', () => {
+        expect(max([-101,-1001])).toEqual([-101]);
+    });
+
 })

@@ -29,4 +29,5 @@ describe('min', () => {
     it('[0,1] is 0', () => {
         expect(min([0,1])).toEqual(0);
     });
+    
 })
