@@ -2,6 +2,14 @@ const filter = require('./filter');
 
 describe('filter', () => {
 
+    const filterUpperCase = (character) => {
+        return character==character.toUpperCase();            
+    }   
+    const filterLowerCase = (character) => {
+        return character==character.toLowerCase();            
+    }
+    
+
     it('filter([], x => true) should give []', () => {
         expect(filter([],x => true)).toEqual([]);
     });
@@ -19,12 +27,18 @@ describe('filter', () => {
     });
 
     it('filter([a,B,c,D], filterUpperCase) should be [B,D]', () => {
-        expect(filter(['a','B','c','D'],filteruppercase)).toEqual(['B','D']);
+        expect(filter(['a','B','c','D'],filterUpperCase)).toEqual(['B','D']);
     });
 
     it('filter([a,B,c,D], filterUpperCase) should be [B,D]', () => {
-        expect(filter(['B'],filteruppercase)).toEqual(['B','D']);
+        
+        expect(filter(['a','B','c','D'],filterUpperCase)).toEqual(['B','D']);
     });
+
+    it('filter([a,B,c,D], filterUpperCase) should be [B]', () => {
+        
+        expect(filter(['B'],filterLowerCase)).toEqual([]);
+    }); 
 
 })
 
