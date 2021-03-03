@@ -1,6 +1,5 @@
 const add = require('./add');
 
-
 describe('Add', () => {
 
     it('Sum of 0 and 0 is 0', () => {
@@ -22,5 +21,4 @@ describe('Add', () => {
     it('Sum of 100 and 100 is 200', () => {
         expect(add(100, 100)).toEqual(200);
     });
-
 })
