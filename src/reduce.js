@@ -3,9 +3,9 @@ const reduce = (list, reducer, initialValue) => {
         return initialValue;
     }
     
-    if(initialValue== undefined && isAlpha(list[0]))
+    if(initialValue== undefined && isStringType(list[0]))
         accumulator = '';
-    else if(initialValue==undefined && isAlpha(list[0])==false)
+    else if(initialValue==undefined && isStringType(list[0])==false)
         accumulator = 0;
     else
         accumulator = initialValue;
@@ -14,9 +14,8 @@ const reduce = (list, reducer, initialValue) => {
     return myReduce(list,index,accumulator,reducer);    
   }
 
-  var isAlpha = function(ch){
-    return typeof ch === "string" && ch.length === 1
-           && (ch >= "a" && ch <= "z" || ch >= "A" && ch <= "Z");
+var isStringType = function(element){
+    return typeof element === "string" ;
 }
 
 function myReduce(array,index,accumulator,func){
