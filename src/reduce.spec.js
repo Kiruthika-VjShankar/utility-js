@@ -31,7 +31,23 @@ describe('reduce', () => {
     });
 
     it('reduce([a,g,h],(x,y)=>x+y,A) should be undefined', () => {
-        expect(reduce(['a','g','h'],(x,y)=>x+y,'A')).toEqual('A');
+        expect(reduce(['a','g','h'],(x,y)=>x+y,'A')).toEqual('Aagh');
+    });
+
+    it('reduce([hi,kiruthika],(x,y)=>x+y) should be hikiruthika', () => {
+        expect(reduce(["hi","kiruthika"],(x,y)=>x+y)).toEqual("hikiruthika");
+    });
+
+    it('reduce([hi,kiruthika],(x,y)=>x+" "+y) should be  hi kiruthika', () => {
+        expect(reduce(["hi","kiruthika"],(x,y)=>x+" "+y)).toEqual(" hi kiruthika");
+    });
+
+    it('reduce([hi,kiruthika],(x,y)=>x+" "+y) should be  hi kiruthika', () => {
+        expect(reduce(["hi","kiruthika"],(x,y)=>x+y+" ")).toEqual("hi kiruthika ");
+    });
+
+    it('reduce([hi,kiruthika],(x,y)=>x+" "+y) should be  hi kiruthika', () => {
+        expect(reduce(["hi","kiruthika"],(x,y)=>x+y," ")).toEqual(" hikiruthika");
     });
 })
 
